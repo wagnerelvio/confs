@@ -1,0 +1,10 @@
+# A slightly different configuration for an internal subnet.
+subnet 192.168.1.0 netmask 255.255.255.240 {
+  range 192.168.1.2 192.168.1.14;
+  option domain-name-servers 1.1.1.1;
+#  option domain-name "internal.example.org";
+  option routers 192.168.1.1;
+  option broadcast-address 192.168.1.15;
+  default-lease-time 600;
+  max-lease-time 7200;
+}
